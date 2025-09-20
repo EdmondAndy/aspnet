@@ -20,25 +20,33 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 - **WebApp/**
   - `MyWebApp/`: Basic ASP.NET Core web application.
 
-## Projects
+
+## Project Highlights
 
 ### Controllers
+
 - Demonstrates controller actions, route parameters, returning JSON, files, and custom responses.
 
 ### Middleware
+
 - Shows how to create and use custom middleware in ASP.NET Core.
 
 ### Routing
+
 - Examples of custom routing, constraints, and route handling.
 
 ### Static Files
+
 - How to serve static files (e.g., PDFs, images) from the `wwwroot` folder.
 
 ### UseWhen
+
 - Demonstrates conditional middleware logic using the `UseWhen` extension.
 
 ### WebApp
+
 - A simple web application for further extension and experimentation.
+
 
 ## Getting Started
 
@@ -51,26 +59,27 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 
 1. Clone the repository:
 
-   ```sh
-   git clone https://github.com/EdmondAndy/aspnet.git
-   cd aspnet
-   ```
+  ```sh
+  git clone https://github.com/EdmondAndy/aspnet.git
+  cd aspnet
+  ```
 
 2. Build a project (example for MyMiddleware):
 
-   ```sh
-   dotnet build MiddleWare/MyMiddleware/MyMiddleware.csproj
-   ```
+  ```sh
+  dotnet build MiddleWare/MyMiddleware/MyMiddleware.csproj
+  ```
 
-   You can build other projects similarly by specifying their `.csproj` file.
+  You can build other projects similarly by specifying their `.csproj` file.
 
 3. Run a project (example for MyWebApp):
 
-   ```sh
-   dotnet run --project WebApp/MyWebApp/MyWebApp.csproj
-   ```
+  ```sh
+  dotnet run --project WebApp/MyWebApp/MyWebApp.csproj
+  ```
 
-   Replace the project path as needed for other samples.
+  Replace the project path as needed for other samples.
+
 
 ## Folder Details
 
@@ -79,6 +88,7 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 - `Properties/launchSettings.json`: Debug and launch settings.
 - `Controllers/`: Contains controller classes for handling HTTP requests.
 - `wwwroot/`: Static files (PDFs, images, etc.) served by the app.
+
 
 ## Contributing
 
