@@ -1,0 +1,32 @@
+@using MyViews.Models
+@{
+    string appTitle = "Asp.Net Core Demo App";
+    Person person = new Person
+    {
+        Name = "Edmond",
+        DateOfBirth = new DateTime(1990, 1, 1)
+    };
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>@appTitle</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+<body>
+    <h1>Welcome to My ASP.NET App</h1>
+    <h2>Hello @person.Name</h2>
+    @if (person.DateOfBirth.HasValue)
+    {
+        double age = Math.Round((DateTime.Now - person.DateOfBirth).Value.TotalDays / 365.25);
+        <p>Your date of birth is @person.DateOfBirth.Value.ToString("D")</p>
+        <h3>@age years old</h3>
+    }
+    else
+    {
+        <p>Date of birth not provided.</p>
+    }
+</body>
+</html>
