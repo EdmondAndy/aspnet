@@ -48,14 +48,11 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 - A simple web application for further extension and experimentation.
 
 
-## Getting Started
-
-### Prerequisites
-
+-### Prerequisites
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 - macOS, Windows, or Linux
 
-### Build and Run
+-### Build and Run
 
 1. Clone the repository:
 
@@ -64,6 +61,7 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
   cd aspnet
   ```
 
+
 2. Build a project (example for MyMiddleware):
 
   ```sh
@@ -71,6 +69,7 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
   ```
 
   You can build other projects similarly by specifying their `.csproj` file.
+
 
 3. Run a project (example for MyWebApp):
 
@@ -81,8 +80,7 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
   Replace the project path as needed for other samples.
 
 
-## Folder Details
-
+-### Folder Details
 - `appsettings.json` and `appsettings.Development.json`: Configuration files for each project.
 - `Program.cs`: Main entry point for each application.
 - `Properties/launchSettings.json`: Debug and launch settings.
@@ -90,12 +88,10 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 - `wwwroot/`: Static files (PDFs, images, etc.) served by the app.
 
 
-## Contributing
-
+-### Contributing
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
-## License
-
+-### License
 This project is licensed under the MIT License.
 
 ## Projects
