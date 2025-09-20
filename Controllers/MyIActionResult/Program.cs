@@ -1,6 +1,6 @@
 var builder = WebApplication.CreateBuilder(args);
+//builder.Services.AddControllers().AddXmlSerializerFormatters();
 builder.Services.AddControllers();
-
 var app = builder.Build();
 
 app.UseStaticFiles();
