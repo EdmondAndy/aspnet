@@ -1,4 +1,5 @@
-using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc;     
+using MyViews.Models;
 
 namespace MyViews.Controllers
 {
@@ -8,11 +9,14 @@ namespace MyViews.Controllers
         [Route("/")]
         public IActionResult Index()
         {
-            return View();  //Views/Home/Index.cshtml
-            // return new ViewResult()
-            // {
-            //     ViewName = "abc"
-            // };
+            ViewData["appTitle"] = "Asp.Net Core MVC Application";
+            Person person = new Person
+            {
+                Name = "Edmond",
+                DateOfBirth = new DateTime(1990, 1, 1)
+            };
+            ViewData["person"] = person;
+            return View();
         }
     }
 }
