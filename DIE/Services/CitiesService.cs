@@ -2,7 +2,7 @@
 
 namespace Services;
 
-public class CitiesService : ICitiesService
+public class CitiesService : ICitiesService, IDisposable
 {
     private List<string> _cities;
     public CitiesService()
@@ -20,5 +20,12 @@ public class CitiesService : ICitiesService
     public List<string> GetCities()
     {
         return _cities;
+    }
+
+    public void Dispose()
+    {
+        //Clean up resources
+        // TO DO: add logic to close db connection
+        _cities = null;
     }
 }
