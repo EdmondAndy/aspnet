@@ -2,43 +2,6 @@
 
 This repository contains multiple ASP.NET Core projects and examples, demonstrating middleware, routing, controllers, static files, and more. Each folder is a self-contained sample or learning module.
 
-## Structure
-
-- **Controllers/**
-  - `MyBankingApp/`: Banking app with controllers for account details and statements.
-  - `MyControllers/`: Example controllers and models.
-  - `MyIActionResult/`: Demonstrates IActionResult usage in controllers.
-- **MiddleWare/**
-  - `MyMiddleware/`: Custom middleware implementation and usage.
-  - `CustomMiddleware/`: Contains custom middleware classes (e.g., HelloCustomMiddleware).
-- **Routing/**
-  - `MyRouting/`: Custom routing and constraints examples.
-- **StaticFiles/**
-  - `MyStaticFiles/`: Serving static files in ASP.NET Core.
-- **UseWhen/**
-  - `MyUseWhen/`: Conditional middleware execution using `UseWhen`.
-- **WebApp/**
-  - `MyWebApp/`: Basic ASP.NET Core web application.
-
-
-## Project Highlights
-
-### Controllers
-
-- Demonstrates controller actions, route parameters, returning JSON, files, and custom responses.
-
-### Middleware
-
-- Shows how to create and use custom middleware in ASP.NET Core.
-
-### Routing
-
-- Examples of custom routing, constraints, and route handling.
-
-### Static Files
-
-- How to serve static files (e.g., PDFs, images) from the `wwwroot` folder.
-
 ### UseWhen
 
 - Demonstrates conditional middleware logic using the `UseWhen` extension.
