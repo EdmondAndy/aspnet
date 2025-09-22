@@ -7,3 +7,11 @@
 <div class="box">
     Environment: @ViewBag.CurrentEnvironment
 </div>
+
+<Environment include="Development">
+    <button class="button button-blue-back">Button only for Development Environment</button>
+</Environment>
+
+<Environment exclude="Development">
+    <button class="button button-green-back">Button for non-Development Environments</button>
+</Environment>
