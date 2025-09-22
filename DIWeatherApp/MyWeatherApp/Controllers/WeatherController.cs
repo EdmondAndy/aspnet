@@ -26,7 +26,7 @@ namespace MyWeatherApp.Controllers
         }
 
         [Route("/weather/{cityCode}")]
-        public IActionResult Weather(string? cityCode)
+        public IActionResult City(string? cityCode)
         {
             //if cityCode is not supplied in the route parameter
             if (string.IsNullOrEmpty(cityCode))
