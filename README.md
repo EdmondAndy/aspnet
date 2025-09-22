@@ -10,6 +10,10 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 
 - A simple web application for further extension and experimentation.
 
+### Environments
+
+- Demonstrates environment-specific configuration and usage in ASP.NET Core projects. See `Environments/MyEnvironments` for examples of using `appsettings.json` and `appsettings.Development.json` to manage settings for different environments (Development, Production, etc).
+
 
 -### Prerequisites
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
@@ -49,6 +53,8 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 - `Properties/launchSettings.json`: Debug and launch settings.
 - `Controllers/`: Contains controller classes for handling HTTP requests.
 - `wwwroot/`: Static files (PDFs, images, etc.) served by the app.
+
+- `Environments/`: Contains projects and examples for environment-based configuration and settings.
 
 
 -### Contributing
