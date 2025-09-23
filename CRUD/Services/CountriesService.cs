@@ -1,56 +1,70 @@
-﻿using ServiceContracts;
+﻿
+﻿using Entities;
+using ServiceContracts;
 using ServiceContracts.DTO;
-using Entities;
 
-namespace Services;
-
-public class CountriesService : ICountriesService
+namespace Services
 {
-private readonly List<Country> _countries;
+  public class CountriesService : ICountriesService
+  {
+    //private field
+    private readonly List<Country> _countries;
 
+    //constructor
     public CountriesService()
     {
-        _countries = new List<Country>();
+      _countries = new List<Country>();
     }
 
     public CountryResponse AddCountry(CountryAddRequest? countryAddRequest)
     {
-        //Check if countryAddRequest is not null
-        //Validate all properties of countryAddRequest
-        //Convert countryAddRequest from CountryAddRequest to Country type
-        //Generate a new CountryID
-        //Then add it into List<Country>
-        //Return Country Response Object with generated CountryID
 
-        if(countryAddRequest == null)
-        {
-            throw new ArgumentNullException(nameof(countryAddRequest));
-        }
+      //Validation: countryAddRequest parameter can't be null
+      if (countryAddRequest == null)
+      {
+        throw new ArgumentNullException(nameof(countryAddRequest));
+      }
 
-        if(countryAddRequest.CountryName == null)
-        {
-            throw new ArgumentNullException(nameof(countryAddRequest.CountryName));
-        }
+      //Validation: CountryName can't be null
+      if (countryAddRequest.CountryName == null)
+      {
+        throw new ArgumentException(nameof(countryAddRequest.CountryName));
+      }
 
-        if (_countries.Where(temp => temp.CountryName == countryAddRequest.CountryName).Any())
-        {
-            throw new ArgumentException($"Country with name {countryAddRequest.CountryName} already exists. Country names must be unique");
-        }
- 
-        //Convert object from CountryAddRequest to CountryResponse
-        Country country = countryAddRequest.ToCountry();
+      //Validation: CountryName can't be duplicate
+      if (_countries.Where(temp => temp.CountryName == countryAddRequest.CountryName).Count() > 0)
+      {
+        throw new ArgumentException("Given country name already exists");
+      }
 
-        //generate countryID
-        country.CountryID = Guid.NewGuid();
+      //Convert object from CountryAddRequest to Country type
+      Country country = countryAddRequest.ToCountry();
 
-        //Add country object to the list
-        _countries.Add(country);
-        return country.ToCountryResponse();
+      //generate CountryID
+      country.CountryID = Guid.NewGuid();
 
+      //Add country object into _countries
+      _countries.Add(country);
+
+      return country.ToCountryResponse();
     }
+
     public List<CountryResponse> GetAllCountries()
     {
-        //Convert List<Country> to List<CountryResponse> and return it
-        return _countries.Select(country => country.ToCountryResponse()).ToList();
+      return _countries.Select(country => country.ToCountryResponse()).ToList();
     }
+
+    public CountryResponse? GetCountryByCountryID(Guid? countryID)
+    {
+      if (countryID == null)
+        return null;
+
+      Country? country_response_from_list = _countries.FirstOrDefault(temp => temp.CountryID == countryID);
+
+      if (country_response_from_list == null)
+        return null;
+
+      return country_response_from_list.ToCountryResponse();
+    }
+  }
 }
