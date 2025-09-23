@@ -14,6 +14,10 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 
 - Demonstrates environment-specific configuration and usage in ASP.NET Core projects. See `Environments/MyEnvironments` for examples of using `appsettings.json` and `appsettings.Development.json` to manage settings for different environments (Development, Production, etc).
 
+### SocialMediaLinks
+
+- Contains examples for managing and displaying social media links in ASP.NET Core apps. See `SocialMediaLinks/MySocialMediaLinks` for sample code and configuration for handling social media URLs, icons, and environment-specific settings.
+
 
 -### Prerequisites
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
