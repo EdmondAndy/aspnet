@@ -18,6 +18,14 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 
 - Contains examples for managing and displaying social media links in ASP.NET Core apps. See `SocialMediaLinks/MySocialMediaLinks` for sample code and configuration for handling social media URLs, icons, and environment-specific settings.
 
+### Unit Testing
+
+- Contains unit test examples for ASP.NET Core projects. See `CRUD/MyUnitTest` for sample test classes and usage of xUnit for testing business logic, controllers, and services. Run tests with:
+
+  ```sh
+  dotnet test CRUD/MyUnitTest/MyUnitTest.csproj
+  ```
+
 
 -### Prerequisites
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
