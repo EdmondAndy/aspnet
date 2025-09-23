@@ -1,0 +1,17 @@
+﻿namespace MyUnitTest;
+
+public class UnitTest1
+{
+    [Fact]
+    public void Test1()
+    {
+        // Arrange
+        MyMath mm = new MyMath();
+        int input1 = 10, intput2 = 5;
+        int expected = 15;
+        // Act
+        int actual = mm.Add(input1, intput2);
+        // Assert
+        Assert.Equal(expected, actual);
+    }
+}
