@@ -27,11 +27,39 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
   ```
 
 
--### Prerequisites
+
+# ASP.NET Core Sample Projects
+
+This repository contains a large collection of ASP.NET Core and .NET sample projects, organized by topic and feature. Each folder demonstrates a specific concept, pattern, or feature in ASP.NET Core development.
+
+## Major Folders & Samples
+
+- **Aspire/**: .NET Aspire sample solution and projects for cloud-native development.
+- **CitiesManager/**: City management API and related configuration samples.
+- **Configurations/**: Custom configuration and options pattern examples.
+- **Controllers/**: Various controller samples, including banking, orders, and file handling.
+- **CRUD/**: Full CRUD sample with entities, services, contracts, and unit tests.
+- **DIE/**: Dependency Injection (DI) examples and documentation.
+- **DIWeatherApp/**: Weather app demonstrating DI and service contracts.
+- **Environments/**: Environment-specific configuration and usage.
+- **MiddleWare/**: Custom middleware implementations and usage.
+- **Routing/**: Routing and route constraint samples.
+- **SocialMediaLinks/**: Managing and displaying social media links in ASP.NET Core.
+- **StaticFiles/**: Serving static files (PDFs, images, etc.) from ASP.NET Core apps.
+- **StockApp/**: Stock app sample and configuration.
+- **UseWhen/**: Conditional middleware logic using the `UseWhen` extension.
+- **ViewComponents/**: View component samples for ASP.NET Core MVC.
+- **Views/**: Razor views and view samples.
+- **WebApp/**: Basic ASP.NET Core web application.
+
+## Getting Started
+
+### Prerequisites
+
 - [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
 - macOS, Windows, or Linux
 
--### Build and Run
+### Build and Run
 
 1. Clone the repository:
 
@@ -39,7 +67,6 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
   git clone https://github.com/EdmondAndy/aspnet.git
   cd aspnet
   ```
-
 
 2. Build a project (example for MyMiddleware):
 
@@ -49,7 +76,6 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 
   You can build other projects similarly by specifying their `.csproj` file.
 
-
 3. Run a project (example for MyWebApp):
 
   ```sh
@@ -58,49 +84,30 @@ This repository contains multiple ASP.NET Core projects and examples, demonstrat
 
   Replace the project path as needed for other samples.
 
+## Folder Details
 
--### Folder Details
 - `appsettings.json` and `appsettings.Development.json`: Configuration files for each project.
 - `Program.cs`: Main entry point for each application.
 - `Properties/launchSettings.json`: Debug and launch settings.
 - `Controllers/`: Contains controller classes for handling HTTP requests.
 - `wwwroot/`: Static files (PDFs, images, etc.) served by the app.
-
 - `Environments/`: Contains projects and examples for environment-based configuration and settings.
 
+## Unit Testing
 
--### Contributing
+Unit tests are provided in `CRUD/MyUnitTest` and other folders. Run tests with:
+
+```sh
+dotnet test CRUD/MyUnitTest/MyUnitTest.csproj
+```
+
+## Contributing
+
 Pull requests are welcome! For major changes, please open an issue first to discuss what you would like to change.
 
--### License
+## License
+
 This project is licensed under the MIT License.
-
-## Projects
-
-
-### 1. MyMiddleware
-
-Implements custom middleware components for ASP.NET Core. Useful for learning how to intercept and process HTTP requests.
-
-### 2. MyUseWhen
-
-Shows how to use the `UseWhen` extension to conditionally apply middleware based on request criteria.
-
-### 3. MyWebApp
-
-A simple web application built with ASP.NET Core, suitable for further extension and experimentation.
-
-## Getting Started
-
-
-### Prerequisites
-
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9.0)
-- macOS, Windows, or Linux
-
-### Build and Run
-
-
 1. Clone the repository:
 
   ```sh
