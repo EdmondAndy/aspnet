@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/MiddleWare/MyMiddleware/MyMiddleware.csproj",
+                "${workspaceFolder}/Aspire/AspireStarterApp.AppHost/AspireStarterApp.AppHost.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/MiddleWare/MyMiddleware/MyMiddleware.csproj",
+                "${workspaceFolder}/Aspire/AspireStarterApp.AppHost/AspireStarterApp.AppHost.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary;ForceNoAlign"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/MiddleWare/MyMiddleware/MyMiddleware.csproj"
+                "${workspaceFolder}/Aspire/AspireStarterApp.AppHost/AspireStarterApp.AppHost.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
